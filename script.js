@@ -4,16 +4,16 @@ function loginWithDiscord() {
     window.location.href = discordOAuthURL;
   }
   
-  async function fetchUserData(code) {
-    try {
-      const response = await fetch(`/discord-auth.php?code=${code}`);
-      const userData = await response.json();
-      handleLoginSuccess(userData);
-      localStorage.setItem('fmUserData', JSON.stringify(userData));
-    } catch (error) {
-      console.error("Ошибка при получении данных:", error);
-    }
+async function fetchUserData(code) {
+  try {
+    const response = await fetch(`http://a63764vo.beget.tech/fmworlds/discord-auth.php?code=${code}`);
+    const userData = await response.json();
+    handleLoginSuccess(userData);
+    localStorage.setItem('fmUserData', JSON.stringify(userData));
+  } catch (error) {
+    console.error("Ошибка при получении данных:", error);
   }
+}
   
   function handleLoginSuccess(userData) {
     const loginButton = document.getElementById('login-button');
