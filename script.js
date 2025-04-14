@@ -1,6 +1,6 @@
 function loginWithDiscord() {
     const discordOAuthURL =
-      'https://discord.com/oauth2/authorize?client_id=1143523217563197440&response_type=code&redirect_uri=http%3A%2F%2Flocalhost&scope=identify';
+      'https://discord.com/oauth2/authorize?client_id=1143523217563197440&response_type=code&redirect_uri=https%3A%2F%2Ffantastikmine.github.io&scope=identify';
     window.location.href = discordOAuthURL;
   }
   
